@@ -6,9 +6,9 @@ from .models import ToDoList, Item
 def index(response,id):
     ls=ToDoList.objects.get(id=id)
    
-    return render(response,'hello/base.html',{})
+    return render(response,'hello/base.html',{"name":ls.name})
 
 
 
 def home(response):
-    return render(response,'hello/home.html',{})
+    return render(response,'hello/home.html',{"name":"test"})
