@@ -12,3 +12,8 @@ def index(response,id):
 
 def home(response):
     return render(response,'hello/home.html',{"name":"test"})
+
+
+
+def create(response):
+    return render(response,'hello/create.html',{})
