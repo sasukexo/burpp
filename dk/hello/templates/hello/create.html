@@ -3,10 +3,10 @@
 {%block title%}Create new List{%endblock%}
 
 {%block content%}
-   Create Pagen
+   Create Page
 
    <form method="post" action="/create/">
-{{form}}
+{{form.as_p}}
     <button type="submit", name="submit">Create new </button>
     </form>
 {%endblock%}
