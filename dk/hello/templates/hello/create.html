@@ -3,10 +3,11 @@
 {%block title%}Create new List{%endblock%}
 
 {%block content%}
-   Create Page
+   <h1>Create Page</h1>
 
    <form method="post" action="/create/">
+    {%csrf_token%}
 {{form.as_p}}
     <button type="submit", name="submit">Create new </button>
     </form>
-{%endblock%}
+{%endblock%}    

@@ -17,5 +17,10 @@ def home(response):
 
 
 def create(response):
-    form=CreateNewList()
+    if response.method=="POST":
+        form=CreateNewList(response.POST)
+        
+
+    else:
+        form=CreateNewList()
     return render(response,'hello/create.html',{'form':form})
